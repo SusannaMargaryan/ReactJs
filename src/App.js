@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Header from './components/funcomp3';
-import Name from './components/funcomp1';
-import About from './components/funcomp2';
+import Header from './components/Header';
+import Name from './components/Name';
+import About from './components/About';
 function App() {
   return (
     <div className="App">
