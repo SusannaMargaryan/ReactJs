@@ -13,12 +13,12 @@ function App() {
                 <hr />
                 <About />
           </div>
-          <div>
+          <div className='comp'>
               <h2>Class Component</h2>
               <hr/>
           </div>
           <div className="class">
-              <Product name='Banana' price='1$' description='Fresh bananas brings from Ecuador'/>
+              <Product name='Banana' price='5$' description='Fresh bananas brings from Ecuador'/>
           </div>
       </>
   );

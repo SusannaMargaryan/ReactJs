@@ -1,4 +1,4 @@
-.App {
+.App,.comp {
   text-align: center;
 }
 ul {
@@ -36,6 +36,7 @@ li a.active {
   display: flex;
   flex-wrap: nowrap;
   padding: 1%;
+  padding-left: 3%;
 }
 .about>img{
   width: 30%;
