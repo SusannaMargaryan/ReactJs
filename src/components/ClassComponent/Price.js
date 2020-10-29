@@ -31,7 +31,7 @@ class  Price extends Component{
           <>
               <h3>Price Class Component</h3>
               <span>Bananas price is {this.state.price}</span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              <p className='pText'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Dolor eveniet hic perspiciatis tempore. Alias aliquid delectus distinctio doloribus,
               fuga fugit laborum libero nostrum numquam quo repellendus unde veniam.</p>
               <button onClick={this.change} className={"btn btn-primary"} >Change currency</button>

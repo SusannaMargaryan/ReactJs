@@ -4,6 +4,7 @@ import Header from './components/FuncComponent/Header';
 import Name from './components/FuncComponent/Name';
 import About from './components/FuncComponent/About';
 import Product from  './components/ClassComponent/Product';
+import ToDo from "./components/ToDoList/ToDo";
 function App() {
   return (
       <>
@@ -19,6 +20,9 @@ function App() {
           </div>
           <div className="class">
               <Product name='Banana' price='5$' description='Fresh bananas brings from Ecuador'/>
+          </div>
+          <div className='list'>
+              <ToDo />
           </div>
       </>
   );
