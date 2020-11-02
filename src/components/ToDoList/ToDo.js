@@ -2,42 +2,45 @@ import React from "react";
 import Task from "./Task";
 class ToDo extends React.Component{
     state = {
-        task: [
-            {
-                inputValue: ''
-             }
-        ]
+        tasks: [],
+        inputValue: ''
     };
     handleChange = (event) => {
         this.setState( {
-            task: [
-                {
-                    inputValue: event.target.value
-                }
-            ]
+            inputValue: event.target.value
         })
     }
     handleClick = () => {
-        console.log('send');
+        const tasksCopy = [...this.state.tasks];
+        const {inputValue } = this.state;
+        tasksCopy.push(inputValue);
+        this.setState({
+            inputValue: '',
+            tasks: tasksCopy
+        })
     }
 
     render() {
-        const tasks = this.state.task.map((el,i) => {
-            return(
-                <Task text={el} key={i}/>
-            );
-        });
+        const {inputValue,tasks} = this.state;
         return(
             <>
                 <div className={'container'}>
                     <input type="text" className={"form-control"}
-                       onChange={this.handleChange}/>
+                       onChange={this.handleChange} placeholder="Please enter your Name"
+                    value={inputValue}
+                    />
                     <button className={"btn btn-danger"}
                     onClick={this.handleClick}
-                    >Click me</button>
+                    >Click me</button><br/><br/>
                 </div>
                 <div className={'container'}>
-                    <p>{tasks}</p>
+                    <div className={'col'}>
+                        <ol className={'list-group'}>
+                            {tasks.map((task,index)=>{
+                                return <Task key={index} data={task}/>
+                            })}
+                        </ol>
+                    </div>
                 </div>
             </>
         );

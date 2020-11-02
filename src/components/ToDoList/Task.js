@@ -3,7 +3,7 @@ import React from "react";
 function Task(props) {
     return(
         <>
-            <span>{props.text.inputValue}</span>
+            <li className={'list-group-item'}>{props.data}</li>
         </>
     );
 }
