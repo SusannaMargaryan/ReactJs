@@ -1,7 +1,7 @@
 import React from 'react';
 function Name(props) {
     return (
-        <span>{props.text}</span>
+        <h2>{props.text}</h2>
     );
 }
 export default Name

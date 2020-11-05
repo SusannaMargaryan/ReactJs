@@ -4,10 +4,7 @@ class  Description extends Component{
         return(
             <>
                 <h3>Description Class Component</h3>
-                <span> {this.props.description}</span>
-                <p className='pText'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Dolor eveniet hic perspiciatis tempore. Alias aliquid delectus distinctio doloribus,
-                fuga fugit laborum libero nostrum numquam quo repellendus unde veniam. Laudantium, quae!</p>
+                <p> {this.props.description}</p>
             </>
         );
     }

@@ -1,5 +1,6 @@
 import React from "react";
 import Task from "./Task";
+import {InputGroup, Button, FormControl,ListGroup} from 'react-bootstrap';
 class ToDo extends React.Component{
     state = {
         tasks: [],
@@ -24,24 +25,24 @@ class ToDo extends React.Component{
         const {inputValue,tasks} = this.state;
         return(
             <>
-                <div className={'container'}>
-                    <input type="text" className={"form-control"}
-                       onChange={this.handleChange} placeholder="Please enter your Name"
+            <InputGroup className="mb-3">
+                <FormControl
+                    onChange={this.handleChange} placeholder="Please enter your Name"
                     value={inputValue}
-                    />
-                    <button className={"btn btn-danger"}
-                    onClick={this.handleClick}
-                    >Click me</button><br/><br/>
-                </div>
-                <div className={'container'}>
-                    <div className={'col'}>
-                        <ol className={'list-group'}>
-                            {tasks.map((task,index)=>{
-                                return <Task key={index} data={task}/>
-                            })}
-                        </ol>
-                    </div>
-                </div>
+                    aria-label="Recipient's username"
+                    aria-describedby="basic-addon2"
+                />
+                <InputGroup.Append>
+                    <Button variant="danger"
+                            onClick={this.handleClick}
+                    >Button</Button>
+                </InputGroup.Append>
+            </InputGroup>
+                <ListGroup as="ol">
+                    {tasks.map((task,index)=>{
+                        return <Task key={index} data={task}/>
+                    })}
+                </ListGroup>
             </>
         );
     }
